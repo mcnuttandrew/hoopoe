@@ -1,0 +1,11 @@
+{
+  "name": "small-bird-of-promise",
+  "version": "1.0.0",
+  "description": "This library collects a number of utility functions that I persistently find myself using across different projects. It is here to reduce copy pasta. I don't guarantee that it will be in anyway useful to you or better than a similar promise library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
