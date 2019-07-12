@@ -1,6 +1,8 @@
-# Small bird of promise
+# Hoopoe
 
-This library collects a number of utility functions that I persistently find myself using across different projects. It is here to reduce copy pasta. I don't guarantee that it will be in anyway useful to you or better than a similar promise library.
+![hoopoe](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Common_Hoopoe_%28Upupa_epops%29_Photograph_by_Shantanu_Kuveskar.jpg/220px-Common_Hoopoe_%28Upupa_epops%29_Photograph_by_Shantanu_Kuveskar.jpg)
+
+This library collects a number of server-side utility promises that I persistently find myself using across different projects. It is here to reduce copy pasta. I don't guarantee that it will be in anyway useful to you or better than a similar promise library.
 
 Each of the commands in this library is a promise.
 
