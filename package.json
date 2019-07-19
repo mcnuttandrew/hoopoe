@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "node tests/tests.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "coverage": "nyc node tests/tests.js | tap-nyc"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.13.1",
+    "nyc": "^14.1.1",
+    "tap-nyc": "^1.0.3",
     "tape": "^4.11.0"
   }
 }

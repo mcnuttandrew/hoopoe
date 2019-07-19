@@ -29,7 +29,6 @@ tape('#getFile non-extant file and then #writeFile to make it exists', t => {
     })
     .then(() => t.deepEqual(msg, expectedError, 'should find that an error was thrown as expected'));
   };
-
   Promise.resolve()
     .then(() => shouldNotFindFakeFile())
     .then(() => writeFile('./tests/fake-file.json', 'Hi mom'))
@@ -37,6 +36,13 @@ tape('#getFile non-extant file and then #writeFile to make it exists', t => {
     .then(foundFile => t.deepEqual(foundFile, 'Hi mom', 'should find the fake file correctly formed'))
     .then(() => executeCommandLineCmd('rm ./tests/fake-file.json'))
     .then(shouldNotFindFakeFile())
+    .then(() => writeFile('./test/fake-file.json', 'Hi mom'))
+    .catch(e => {
+      msg = e.toString();
+    })
+    .then(() => t.equal(msg,
+      'Error: ENOENT: no such file or directory, open \'./test/fake-file.json\'',
+      'caught error should be correct'))
     .then(() => t.end());
 });
 
@@ -59,7 +65,17 @@ tape('#executeCommandLineCmd & #executePromisesInSeries', t => {
         .then(({stdout}) => {
           t.deepEqual(stdout, '', ' should find the folder now deleted');
         })
-    ])
+    ]),
+    () => {
+      let msg = "";
+      return executeCommandLineCmd('smooshsmashsmash')
+      .catch(e => {
+        msg = e.toString();
+      })
+      .then(() => t.equal(
+        'Error: Command failed: smooshsmashsmash\n/bin/sh: smooshsmashsmash: command not found\n',
+        msg, 'should find correct error message'));
+    }
 
   ].map(test => Promise.resolve().then(test)))
   .then(() => t.end());

@@ -7,7 +7,7 @@ This library collects a number of server-side utility promises that I persistent
 
 Requirements: node with access to fs and child_process. I believe this means node v>4, but I am not 100% sure. It will not work in the browser.
 
-Installation: npm install hooepoe
+Installation: npm install hoopoe
 
 ### executeCommandLineCmd(cmd)
 
