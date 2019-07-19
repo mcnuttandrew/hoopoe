@@ -1,4 +1,5 @@
 # Hoopoe
+[![CircleCI](https://circleci.com/gh/mcnuttandrew/hoopoe.svg?style=svg)](https://circleci.com/gh/mcnuttandrew/hoopoe)
 
 ![hoopoe](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Common_Hoopoe_%28Upupa_epops%29_Photograph_by_Shantanu_Kuveskar.jpg/220px-Common_Hoopoe_%28Upupa_epops%29_Photograph_by_Shantanu_Kuveskar.jpg)
 
