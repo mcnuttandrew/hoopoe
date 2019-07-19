@@ -70,10 +70,10 @@ tape('#executeCommandLineCmd & #executePromisesInSeries', t => {
       let msg = "";
       return executeCommandLineCmd('smooshsmashsmash')
       .catch(e => {
-        msg = e.toString();
+        msg = e.toString().split('\n')[0];
       })
       .then(() => t.equal(
-        'Error: Command failed: smooshsmashsmash\n/bin/sh: smooshsmashsmash: command not found\n',
+        'Error: Command failed: smooshsmashsmash',
         msg, 'should find correct error message'));
     }
 
