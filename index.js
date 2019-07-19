@@ -1,4 +1,3 @@
-const path = require('path');
 const fs = require('fs');
 const {exec} = require('child_process');
 
@@ -37,7 +36,7 @@ const writeFile = (fileName, contents) => new Promise((resolve, reject) => {
 });
 
 const sleep = sleepTime => (...args) =>
-  new Promise((resolve, reject) => setTimeout(() => resolve(...args), sleepTime))
+  new Promise(resolve => setTimeout(() => resolve(...args), sleepTime));
 
 function executePromisesInSeries(tasks) {
   return tasks.reduce((promiseChain, task) => promiseChain.then(task), Promise.resolve([]));
@@ -49,4 +48,4 @@ module.exports = {
   sleep: sleep,
   executeCommandLineCmd: executeCommandLineCmd,
   executePromisesInSeries: executePromisesInSeries
-}
+};
