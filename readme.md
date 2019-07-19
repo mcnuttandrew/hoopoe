@@ -5,7 +5,7 @@
 
 This library collects a number of server-side utility promises that I persistently find myself using across different projects. As the name of the library clearly indicates each of the commands in this library gives a promise. I don't guarantee that it will be in anyway useful to you or better than a similar promise library, but I still hope you like it.
 
-Requirements: node with access to fs and child_process. I believe this means node v>4, but I am not 100% sure. It will not work in the browser.
+Requirements: node with access to fs and child_process. I believe this means node v>6, but I am not 100% sure. It will not work in the browser.
 
 Installation: npm install hoopoe
 
