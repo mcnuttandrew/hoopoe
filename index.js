@@ -1,5 +1,9 @@
 var fs = require("fs");
 var exec = require("child_process").exec;
+/**
+ * Execute a bash command
+ * @param cmd - command to execute
+ */
 function executeCommandLineCmd(cmd) {
     return new Promise(function (resolve, reject) {
         exec(cmd, function (err, stdout, stderr) {
@@ -12,6 +16,10 @@ function executeCommandLineCmd(cmd) {
         });
     });
 }
+/**
+ * Get a file (as a string)
+ * @param fileName - the file name to get
+ */
 var getFile = function (fileName) {
     return new Promise(function (resolve, reject) {
         fs.readFile(fileName, "utf8", function (err, data) {

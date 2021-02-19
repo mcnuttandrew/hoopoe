@@ -7,7 +7,7 @@
     "test": "npm run build && node tests/tests.js",
     "lint": "eslint .",
     "coverage": "nyc node tests/tests.js | tap-nyc",
-    "build": "tsc index.ts"
+    "build": "tsc index.ts --declaration"
   },
   "author": "",
   "license": "MIT",
