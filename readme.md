@@ -1,4 +1,5 @@
 # Hoopoe
+
 [![CircleCI](https://circleci.com/gh/mcnuttandrew/hoopoe.svg?style=svg)](https://circleci.com/gh/mcnuttandrew/hoopoe)
 
 ![hoopoe](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Common_Hoopoe_%28Upupa_epops%29_Photograph_by_Shantanu_Kuveskar.jpg/220px-Common_Hoopoe_%28Upupa_epops%29_Photograph_by_Shantanu_Kuveskar.jpg)
@@ -17,6 +18,10 @@ Executes a string of command, and returns an object of as argument to next promi
 
 Get a target file, returns a promise containing the file.
 
+### getFileNamesFromDir(dirName)
+
+For a target directory, return (as a promise) all of the files in that directory
+
 ### writeFile(fileName, contents)
 
 Write file contents to target file name, returns a promise that finishes after the file is written.
@@ -29,7 +34,7 @@ Higher order promise, returns a promise generating function. Can be used to slee
 Promise.resolve()
   .then(() => [1, 2, 3])
   .then(sleep(30))
-  .then(x => console.log(x)) // [1, 2, 3]
+  .then((x) => console.log(x)); // [1, 2, 3]
 ```
 
 ### executePromisesInSeries([() => Promise])
